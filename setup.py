@@ -1,4 +1,5 @@
-from distutils.core import setup
+#!/usr/bin/env python
+from setuptools import setup, find_packages
 
 setup(
     name = "django-varnish",
@@ -8,6 +9,7 @@ setup(
     author_email= 'justquick@gmail.com',
     long_description=open('README.rst').read(),
     description = 'Integration between Django and the Varnish HTTP accelerator using the management port using telnet',
-    packages = ['varnishapp']
+		packages = find_packages('src'),
+		package_dir = {'':'src'},
 )
 
