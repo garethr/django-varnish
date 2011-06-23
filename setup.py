@@ -10,6 +10,7 @@ setup(
     long_description=open('README.rst').read(),
     description = 'Integration between Django and the Varnish HTTP accelerator using the management port using telnet',
 		packages = find_packages('src'),
+		package_data={'vagrantapp': ['templates/*']},
 		package_dir = {'':'src'},
 )
 
